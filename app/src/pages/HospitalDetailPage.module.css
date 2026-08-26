@@ -1,0 +1,264 @@
+.breadcrumb {
+  font-size: var(--text-caption);
+  color: var(--color-neutral-muted);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+  margin: 0;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpiCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kpiHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kpiLabel {
+  font-size: var(--text-caption);
+  color: var(--color-neutral-muted);
+}
+
+.kpiValue {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+}
+
+.editRateLink {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+}
+.editRateLink:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panelTitle {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.linkBtn {
+  font-size: 13px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+}
+.linkBtn:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.specialistsTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.specialistsHead,
+.specialistsRow {
+  display: grid;
+  grid-template-columns: 2fr 1.4fr 1fr 1fr;
+  align-items: center;
+}
+
+.specialistsHead {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.specialistsHeadCell {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-neutral-muted);
+}
+
+.specialistsRow {
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+.specialistsRow:last-child {
+  border-bottom: none;
+}
+.specialistsRow:hover {
+  background: var(--color-background);
+}
+
+.doctorName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-body);
+  color: var(--color-neutral-dark);
+  font-weight: 600;
+}
+
+.doctorAvatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-secondary-light);
+  color: var(--color-primary-dark);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.specialistCell {
+  font-size: var(--text-body);
+  color: var(--color-neutral-dark);
+}
+
+.chartSubtitle {
+  font-size: var(--text-caption);
+  color: var(--color-neutral-muted);
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 140px;
+}
+
+.chartBarWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.chartBar {
+  width: 100%;
+  background: var(--color-secondary);
+  border-radius: 4px 4px 0 0;
+}
+
+.chartBarLast {
+  background: var(--color-primary);
+}
+
+.chartMonth {
+  font-size: 10px;
+  color: var(--color-neutral-muted);
+}
+
+.chartFooter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chartFooterDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.chartFooterText {
+  font-size: var(--text-caption);
+  color: var(--color-neutral-muted);
+}
+
+.emergencyPanel {
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-button);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.emergencyText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.emergencyTitle {
+  font-size: var(--text-body-lg);
+  font-weight: 700;
+  color: var(--color-error-text);
+}
+
+.emergencyBody {
+  font-size: 13px;
+  color: var(--color-error-text);
+  max-width: 640px;
+}

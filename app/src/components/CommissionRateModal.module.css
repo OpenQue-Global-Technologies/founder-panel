@@ -1,0 +1,91 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 41, 55, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.panel {
+  width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-neutral-dark);
+}
+
+.rateRow {
+  display: flex;
+  gap: 16px;
+}
+
+.rateField {
+  flex: 1;
+}
+
+.historySection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.historyLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+}
+
+.historyTable {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.historyHead,
+.historyRow {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 0.8fr 1.3fr;
+  gap: 6px;
+  padding: 8px 12px;
+}
+
+.historyHead {
+  background: var(--color-background);
+}
+
+.historyHeadCell {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-neutral-muted);
+}
+
+.historyRow {
+  border-top: 1px solid var(--color-border);
+}
+
+.historyCell {
+  font-size: 12px;
+  color: var(--color-neutral-dark);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}

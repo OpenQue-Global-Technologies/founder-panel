@@ -1,0 +1,218 @@
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+  margin: 0;
+}
+
+.filtersRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchInput {
+  width: 320px;
+  height: var(--touch-target);
+  padding: 0 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-body);
+  font-family: var(--font-body);
+  outline: none;
+  box-sizing: border-box;
+}
+.searchInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(7, 79, 248, 0.15);
+}
+
+.segmented {
+  display: flex;
+  gap: 4px;
+  background: var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 3px;
+}
+
+.segmentBtn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-neutral-muted);
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+.segmentBtnActive {
+  background: var(--color-surface);
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.statusSelect {
+  height: var(--touch-target);
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-body);
+  font-family: var(--font-body);
+  color: var(--color-neutral-dark);
+  background: var(--color-surface);
+}
+
+.exportBtn {
+  margin-left: auto;
+}
+
+.tableWrap {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.headerRow,
+.bodyRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.8fr 1.2fr 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.headerRow {
+  background: var(--color-background);
+  padding: 12px 20px;
+}
+
+.headerCell {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-neutral-muted);
+  text-transform: uppercase;
+}
+
+.bodyRow {
+  padding: 14px 20px;
+  border-top: 1px solid var(--color-border);
+  cursor: pointer;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-body);
+}
+
+.bodyRow:hover {
+  background: var(--color-background);
+}
+
+.cellName {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.cell {
+  font-size: var(--text-body);
+  color: var(--color-neutral-dark);
+}
+
+.skeletonRow {
+  height: 36px;
+  border-radius: var(--radius-sm);
+  margin: 10px 0;
+  background: linear-gradient(90deg, var(--color-border) 25%, #e9ebee 50%, var(--color-border) 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 100px 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.emptyIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyIconDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2.5px solid var(--color-neutral-faint);
+}
+
+.emptyText {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerText {
+  font-size: 13px;
+  color: var(--color-neutral-muted);
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pageBtn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--color-neutral-dark);
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: var(--color-background);
+}
+
+.pageBtn:disabled {
+  color: var(--color-neutral-faint);
+  cursor: not-allowed;
+}
+
+.pageBtnActive,
+.pageBtnActive:hover {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font-weight: 600;
+}

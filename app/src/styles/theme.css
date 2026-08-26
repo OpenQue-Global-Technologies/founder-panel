@@ -1,0 +1,58 @@
+:root {
+  /* Colors */
+  --color-primary: #074ff8;
+  --color-primary-dark: #0540c7;
+  --color-secondary: #4171f0;
+  --color-secondary-light: #dfffff;
+  --color-background: #f7f8ef;
+  --color-surface: #ffffff;
+  --color-neutral-dark: #1f2937;
+  --color-neutral-muted: #6b7280;
+  --color-neutral-faint: #9ca3af;
+  --color-border: #f3f4f6;
+
+  --color-success-bg: #dcfce7;
+  --color-success-text: #166534;
+  --color-waiting-bg: #ede4fe;
+  --color-waiting-text: #6d28d9;
+  --color-delayed-bg: #fef3c7;
+  --color-delayed-text: #92400e;
+  --color-inactive-bg: #f3f4f6;
+  --color-inactive-text: #4b5563;
+  --color-error-bg: #fee2e2;
+  --color-error-text: #991b1b;
+  --color-error-button: #dc2626;
+
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  --text-display: 36px;
+  --text-h1: 28px;
+  --text-h2: 22px;
+  --text-h3: 18px;
+  --text-body-lg: 16px;
+  --text-body: 14px;
+  --text-caption: 12px;
+  --text-micro: 10px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Touch target */
+  --touch-target: 40px;
+}
