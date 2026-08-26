@@ -1,4 +1,4 @@
-﻿import { useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { TextField } from "../components/FormField";
@@ -98,7 +98,7 @@ export function LoginPage() {
           <TextField
             label="Credentials"
             type={showPassword ? "text" : "password"}
-            placeholder="ΓÇóΓÇóΓÇóΓÇóΓÇóΓÇóΓÇóΓÇóΓÇóΓÇó"
+            placeholder="••••••••••"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             disabled={loading}
