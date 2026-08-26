@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes, TextareaHTMLAttributes, ReactNode } from "react";
+﻿import { useId, type InputHTMLAttributes, type TextareaHTMLAttributes, type ReactNode } from "react";
 import styles from "./FormField.module.css";
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -7,12 +7,20 @@ interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   rightSlot?: ReactNode;
 }
 
-export function TextField({ label, errorMessage, rightSlot, className, ...rest }: TextFieldProps) {
+export function TextField({ id: explicitId, label, errorMessage, rightSlot, className, ...rest }: TextFieldProps) {
+  const generatedId = useId();
+  const id = explicitId || (label ? generatedId : undefined);
+
   return (
     <div className={styles.field}>
-      {label && <label className={styles.label}>{label}</label>}
+      {label && (
+        <label className={styles.label} htmlFor={id}>
+          {label}
+        </label>
+      )}
       <div style={{ position: "relative" }}>
         <input
+          id={id}
           className={[styles.input, errorMessage ? styles.error : "", className].filter(Boolean).join(" ")}
           style={rightSlot ? { paddingRight: 40 } : undefined}
           {...rest}
@@ -32,11 +40,18 @@ interface TextAreaFieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement>
   label?: string;
 }
 
-export function TextAreaField({ label, className, ...rest }: TextAreaFieldProps) {
+export function TextAreaField({ id: explicitId, label, className, ...rest }: TextAreaFieldProps) {
+  const generatedId = useId();
+  const id = explicitId || (label ? generatedId : undefined);
+
   return (
     <div className={styles.field}>
-      {label && <label className={styles.label}>{label}</label>}
-      <textarea className={[styles.textarea, className].filter(Boolean).join(" ")} {...rest} />
+      {label && (
+        <label className={styles.label} htmlFor={id}>
+          {label}
+        </label>
+      )}
+      <textarea id={id} className={[styles.textarea, className].filter(Boolean).join(" ")} {...rest} />
     </div>
   );
 }
