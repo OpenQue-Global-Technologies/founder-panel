@@ -1,0 +1,49 @@
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.subtitle {
+  font-size: var(--text-caption);
+  color: var(--color-neutral-muted);
+}
+
+.linkBtn {
+  font-size: 13px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+.linkBtn:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}

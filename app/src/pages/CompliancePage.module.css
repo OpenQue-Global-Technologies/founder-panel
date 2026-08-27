@@ -1,0 +1,37 @@
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.grievanceCols {
+  grid-template-columns: 1.1fr 1fr 1.4fr 1.4fr 1fr 1fr;
+}
+
+.deletionCols {
+  grid-template-columns: 1.1fr 1fr 1.4fr 1fr 1fr 1fr;
+}
+
+.auditCols {
+  grid-template-columns: 1.1fr 1fr 1fr 1.6fr 1.4fr;
+}
+
+.ipCell {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 13px;
+  color: var(--color-neutral-dark);
+}

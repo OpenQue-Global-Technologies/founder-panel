@@ -1,0 +1,69 @@
+.tableWrap {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.headerRow,
+.bodyRow {
+  display: grid;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerRow {
+  background: var(--color-background);
+  padding: 10px 16px;
+}
+
+.headerCell {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-neutral-muted);
+  text-transform: uppercase;
+}
+
+.bodyRow {
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.bodyRowInteractive {
+  cursor: pointer;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-body);
+}
+.bodyRowInteractive:hover {
+  background: var(--color-background);
+}
+
+.bodyRowSelected {
+  background: var(--color-background);
+}
+
+.cell {
+  font-size: var(--text-body);
+  color: var(--color-neutral-dark);
+}
+
+.cellMuted {
+  font-size: var(--text-body);
+  color: var(--color-neutral-muted);
+}
+
+.cellStrong {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.emptyRow {
+  padding: 24px 16px;
+  font-size: var(--text-body);
+  color: var(--color-neutral-muted);
+  text-align: center;
+}

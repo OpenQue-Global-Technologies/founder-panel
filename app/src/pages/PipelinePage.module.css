@@ -1,0 +1,123 @@
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+  margin: 0;
+}
+
+.board {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  align-items: flex-start;
+}
+
+.column {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.columnTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.columnCount {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-neutral-muted);
+  background: var(--color-surface);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.columnBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.cardMeta {
+  font-size: 11px;
+  color: var(--color-neutral-muted);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.cardRevenue {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+}
+
+.cardMoveBtns {
+  display: flex;
+  gap: 4px;
+}
+
+.moveBtn {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-neutral-muted);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.moveBtn:hover:not(:disabled) {
+  background: var(--color-background);
+  color: var(--color-neutral-dark);
+}
+.moveBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

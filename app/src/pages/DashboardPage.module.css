@@ -1,0 +1,97 @@
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+  margin: 0;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gaugeErrorRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.gaugeWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disruptionList {
+  display: flex;
+  flex-direction: column;
+}
+
+.disruptionRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 4px;
+  border-top: 1px solid var(--color-border);
+}
+.disruptionRow:first-child {
+  border-top: none;
+}
+
+.disruptionMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.disruptionHospital {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.disruptionName {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+}
+
+.disruptionCity {
+  font-size: var(--text-caption);
+  color: var(--color-neutral-muted);
+}
+
+.disruptionIssue {
+  font-size: 13px;
+  color: var(--color-neutral-muted);
+}
+
+.disruptionSince {
+  font-size: var(--text-caption);
+  color: var(--color-neutral-faint);
+  white-space: nowrap;
+}
+
+.emptyDisruptions {
+  padding: 32px 4px;
+  text-align: center;
+  font-size: var(--text-body);
+  color: var(--color-neutral-muted);
+}

@@ -1,0 +1,74 @@
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+  margin: 0;
+}
+
+.teamCols {
+  grid-template-columns: 1.4fr 1.6fr 1fr 1fr 0.8fr 0.6fr;
+}
+
+.apiKeyCols {
+  grid-template-columns: 1.6fr 1.6fr 1fr 1fr 0.8fr 0.8fr;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-error-text);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  padding: 0;
+  text-align: right;
+}
+.actionBtn:hover {
+  text-decoration: underline;
+}
+.actionBtn:disabled {
+  color: var(--color-neutral-faint);
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.flagRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 4px;
+  border-top: 1px solid var(--color-border);
+}
+.flagRow:first-child {
+  border-top: none;
+}
+
+.flagText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flagName {
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+}
+
+.flagDescription {
+  font-size: 13px;
+  color: var(--color-neutral-muted);
+}
+
+.integrationCols {
+  grid-template-columns: 1.4fr 1.6fr 1fr 0.8fr;
+}
+
+.keyCell {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 13px;
+  color: var(--color-neutral-dark);
+}

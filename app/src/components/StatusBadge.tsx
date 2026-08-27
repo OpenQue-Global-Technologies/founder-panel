@@ -15,6 +15,26 @@ const STATUS_TONE: Record<string, BadgeTone> = {
   Delayed: "delayed",
   Suspended: "inactive",
   "Off Duty": "inactive",
+  "System Healthy": "success",
+  "Audit Ready": "success",
+  // Revenue — settlement status
+  Paid: "success",
+  Invoiced: "waiting",
+  Overdue: "error",
+  // Support — ticket status
+  Open: "delayed",
+  "In Progress": "waiting",
+  Resolved: "success",
+  Closed: "inactive",
+  // Compliance — grievance / deletion request status
+  Investigating: "waiting",
+  Pending: "delayed",
+  Completed: "success",
+  // Settings — team / API key status
+  Invited: "waiting",
+  Revoked: "inactive",
+  Connected: "success",
+  "Not Connected": "inactive",
 };
 
 export function StatusBadge({ status }: { status: string }) {

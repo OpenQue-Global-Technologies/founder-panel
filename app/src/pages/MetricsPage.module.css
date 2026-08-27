@@ -1,0 +1,53 @@
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-h1);
+  color: var(--color-neutral-dark);
+  margin: 0;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cohortTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cohortTable th {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-neutral-muted);
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cohortTable td {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cohortLabel {
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+  white-space: nowrap;
+}
+
+.cohortCell {
+  text-align: center;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+}
+
+.cohortEmpty {
+  text-align: center;
+  color: var(--color-neutral-faint);
+}
