@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { AppShell } from "../components/AppShell";
 import { Button } from "../components/Button";
 import { StatusBadge } from "../components/StatusBadge";
+import { AddHospitalModal } from "../components/AddHospitalModal";
 import { useHospitals } from "../context/HospitalsContext";
-import { formatInr } from "../data/hospitals";
+import { useAuth } from "../context/AuthContext";
+import { createHospital, formatInr } from "../data/hospitals";
 import type { HospitalStatus, OperatingMode } from "../types/hospital";
 import styles from "./PartnerListPage.module.css";
 
@@ -32,13 +34,15 @@ function exportCsv(rows: { name: string; city: string; mode: string; status: str
 }
 
 export function PartnerListPage() {
-  const { hospitals } = useHospitals();
+  const { hospitals, addHospital } = useHospitals();
+  const { founder } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [mode, setMode] = useState<OperatingMode | "All">("All");
   const [status, setStatus] = useState<HospitalStatus | "All Statuses">("All Statuses");
   const [page, setPage] = useState(1);
+  const [addHospitalOpen, setAddHospitalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 650);
@@ -75,7 +79,9 @@ export function PartnerListPage() {
     <AppShell active="Partners">
       <div className={styles.titleRow}>
         <h1 className={styles.title}>Hospital Partner List</h1>
-        <Button variant="primary">+ Add New Hospital</Button>
+        <Button variant="primary" onClick={() => setAddHospitalOpen(true)}>
+          + Add New Hospital
+        </Button>
       </div>
 
       <div className={styles.filtersRow}>
@@ -200,6 +206,16 @@ export function PartnerListPage() {
             </div>
           </div>
         </>
+      )}
+
+      {addHospitalOpen && (
+        <AddHospitalModal
+          onClose={() => setAddHospitalOpen(false)}
+          onCreate={(input) => {
+            addHospital(createHospital({ ...input, changedBy: founder?.name ?? "Founder" }));
+            setAddHospitalOpen(false);
+          }}
+        />
       )}
     </AppShell>
   );

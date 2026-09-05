@@ -32,6 +32,7 @@ export interface Hospital {
   activeDoctors: number;
   totalAppointments: number;
   systemIntegration: boolean;
+  adminEmail?: string;
   specialists: Doctor[];
   revenueTrend: { month: string; value: number }[];
   commissionAudit: CommissionAuditEntry[];

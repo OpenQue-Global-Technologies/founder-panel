@@ -4,6 +4,7 @@ interface Founder {
   name: string;
   initials: string;
   email: string;
+  role: string;
 }
 
 interface AuthContextValue {
@@ -17,7 +18,7 @@ const SESSION_KEY = "openque_founder_session";
 const VALID_EMAIL = "founder@openque.in";
 const VALID_PASSWORD = "RootAccess#2026";
 
-const FOUNDER: Founder = { name: "Priya Shah", initials: "PS", email: VALID_EMAIL };
+const FOUNDER: Founder = { name: "Priya Shah", initials: "PS", email: VALID_EMAIL, role: "Founder" };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 

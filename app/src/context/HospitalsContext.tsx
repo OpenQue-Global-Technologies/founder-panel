@@ -5,6 +5,7 @@ import { buildInitialHospitals } from "../data/hospitals";
 interface HospitalsContextValue {
   hospitals: Hospital[];
   getHospital: (id: string) => Hospital | undefined;
+  addHospital: (hospital: Hospital) => void;
   toggleSystemIntegration: (id: string) => void;
   suspendHospital: (id: string) => void;
   updateCommission: (
@@ -19,6 +20,10 @@ export function HospitalsProvider({ children }: { children: ReactNode }) {
   const [hospitals, setHospitals] = useState<Hospital[]>(() => buildInitialHospitals());
 
   const getHospital = useCallback((id: string) => hospitals.find((h) => h.id === id), [hospitals]);
+
+  const addHospital = useCallback((hospital: Hospital) => {
+    setHospitals((prev) => [hospital, ...prev]);
+  }, []);
 
   const toggleSystemIntegration = useCallback((id: string) => {
     setHospitals((prev) => prev.map((h) => (h.id === id ? { ...h, systemIntegration: !h.systemIntegration } : h)));
@@ -48,8 +53,8 @@ export function HospitalsProvider({ children }: { children: ReactNode }) {
   );
 
   const value = useMemo(
-    () => ({ hospitals, getHospital, toggleSystemIntegration, suspendHospital, updateCommission }),
-    [hospitals, getHospital, toggleSystemIntegration, suspendHospital, updateCommission]
+    () => ({ hospitals, getHospital, addHospital, toggleSystemIntegration, suspendHospital, updateCommission }),
+    [hospitals, getHospital, addHospital, toggleSystemIntegration, suspendHospital, updateCommission]
   );
 
   return <HospitalsContext.Provider value={value}>{children}</HospitalsContext.Provider>;

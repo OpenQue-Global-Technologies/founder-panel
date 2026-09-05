@@ -164,6 +164,41 @@ export function buildInitialHospitals(): Hospital[] {
   }));
 }
 
+export function createHospital(input: {
+  name: string;
+  city: string;
+  mode: OperatingMode;
+  commissionRate: number;
+  adminEmail: string;
+  changedBy: string;
+}): Hospital {
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+  return {
+    id: `${slugify(input.name)}-${Date.now()}`,
+    name: input.name,
+    city: input.city,
+    mode: input.mode,
+    status: "Waiting",
+    doctors: 0,
+    monthlyRevenue: 0,
+    commissionRate: input.commissionRate,
+    activeDoctors: 0,
+    totalAppointments: 0,
+    systemIntegration: false,
+    adminEmail: input.adminEmail,
+    specialists: [],
+    revenueTrend: months.map((month) => ({ month, value: 0 })),
+    commissionAudit: [
+      {
+        date: new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }),
+        oldRate: 0,
+        newRate: input.commissionRate,
+        changedBy: input.changedBy,
+      },
+    ],
+  };
+}
+
 export function formatInr(amount: number): string {
   if (amount === 0) return "₹0";
   return "₹" + amount.toLocaleString("en-IN");
